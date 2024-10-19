@@ -1,0 +1,8 @@
+name: Event datails on Issue
+on: issues
+jobs:
+  issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get issue data
+        run: echo "Issue data  ${{ toJson(github.event) }}"
